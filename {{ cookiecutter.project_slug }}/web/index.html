@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arcade Web Template</title>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.29.0/full/pyodide.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        async function main() {
+            let pyodide = await loadPyodide();
+            await pyodide.loadPackage("micropip");
+            const micropip = pyodide.pyimport("micropip");
+            await pyodide.loadPackage("pillow");
+            await micropip.install("arcade=={{ cookiecutter.arcade_version}}", pre=true);
+            await micropip.install("http://localhost:8000/{{ cookiecutter.project_slug }}-1.0.0-py3-none-any.whl");
+        
+            pyodide.runPython(`
+                import {{ cookiecutter.project_slug }}
+                {{ cookiecutter.project_slug }}.main()
+            `);
+        }
+        main();
+    </script>
+</body>
+
+</html>
