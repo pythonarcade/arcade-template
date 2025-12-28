@@ -5,7 +5,7 @@ This project was generated using the [Arcade Template](https://github.com/python
 ## Initial Setup
 
 ```bash
-uv sync
+uv sync --prerelease allow
 ```
 
 ## Running the application on desktop
