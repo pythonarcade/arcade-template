@@ -17,4 +17,4 @@ dev = [
 packages = ["{{ cookiecutter.project_slug }}"]
 
 [tool.setuptools.dynamic]
-version = {attr = "{{ cookiecutter.project_slug }}.__version__"}
+version = {attr = "{{ cookiecutter.project_slug }}._version.__version__"}
