@@ -1,12 +1,12 @@
 [project]
 name = "{{ cookiecutter.project_slug }}"
+version = "1.0.0"
 description = "{{ cookiecutter.project_description }}"
 readme = "README.md"
 requires-python = ">={{ cookiecutter.python_version }}"
 dependencies = [
     "arcade=={{ cookiecutter.arcade_version }}"
 ]
-dynamic = ["version"]
 
 [dependency-groups]
 dev = [
