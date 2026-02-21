@@ -1,9 +1,9 @@
 {
-    "project_name": "My Arcade Application",
+    "project_name": "Arcade Template",
     "project_slug": "app",
     "project_description": "An application built with Arcade",
     "author": "Anonymous",
-    "arcade_version": "4.0.0.dev1",
+    "arcade_version": "4.0.0.dev3",
     "web_server_port": "8000",
     "python_version": "3.14"
 }

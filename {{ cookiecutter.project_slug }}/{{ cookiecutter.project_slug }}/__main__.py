@@ -1,5 +1,8 @@
+from pathlib import Path
+
 import arcade
 
+ASSETS_PATH = Path(__file__).parent.parent / "assets"
 
 class App(arcade.Window):
     
@@ -7,7 +10,7 @@ class App(arcade.Window):
         super().__init__(800, 600, "Arcade Project")
         arcade.set_background_color(arcade.color.CORNFLOWER_BLUE)
 
-        self.robot_texture = arcade.load_texture("assets/robot.png")
+        self.robot_texture = arcade.load_texture(ASSETS_PATH / "robot.png")
         self.robot_sprite = arcade.Sprite(self.robot_texture, center_x=200, center_y=200)
         self.sprite_list = arcade.SpriteList()
         self.sprite_list.append(self.robot_sprite)
