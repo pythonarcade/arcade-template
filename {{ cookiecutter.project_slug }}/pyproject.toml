@@ -20,6 +20,3 @@ build-backend = "uv_build"
 [tool.uv.build-backend]
 module-name = "app"
 module-root = ""
-data = {
-  assets = "assets"
-}
