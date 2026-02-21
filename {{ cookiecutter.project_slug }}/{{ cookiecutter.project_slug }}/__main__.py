@@ -4,12 +4,17 @@ import arcade
 class App(arcade.Window):
     
     def __init__(self):
-        super().__init__(800, 600, "Arcade Web Template")
+        super().__init__(800, 600, "Arcade Project")
         arcade.set_background_color(arcade.color.CORNFLOWER_BLUE)
+
+        self.robot_texture = arcade.load_texture("assets/robot.png")
+        self.robot_sprite = arcade.Sprite(self.robot_texture, center_x=200, center_y=200)
+        self.sprite_list = arcade.SpriteList()
+        self.sprite_list.append(self.robot_sprite)
 
     def on_draw(self):
         self.clear()
-        arcade.draw_text("Hello, Arcade!", self.width // 2, self.height // 2, arcade.color.WHITE)
+        self.sprite_list.draw()
 
 
 def main():
